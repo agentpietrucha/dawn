@@ -103,7 +103,7 @@
       background: transparent;
     }
     .section-header {
-      top: 0;
+      top: 39px;
       bottom: auto;
       margin-bottom: {{ section.settings.margin_bottom }}px;
       border-bottom: 0.1rem solid rgba(var(--color-foreground));
@@ -341,6 +341,7 @@
     constructor() {
       super();
       this.SCROLL_THRESHOLD = 100;
+      this.ANNOUNCEMENT_HEIGHT = 39;
     }
 
     connectedCallback() {
@@ -393,6 +394,11 @@
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+      if (scrollTop <= this.SCROLL_THRESHOLD && window.innerWidth > 750) {
+        const top = this.ANNOUNCEMENT_HEIGHT - scrollTop;
+        this.header.style.top = (top < 0 ? 0 : top) + 'px';
+      }
 
       if (scrollTop > this.SCROLL_THRESHOLD) {
         this.header.classList.add('scrolled-past-header');
