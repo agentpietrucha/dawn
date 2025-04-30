@@ -11,6 +11,31 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "announcement_bar_QLJ433": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_NpkP9E": {
+          "type": "announcement",
+          "settings": {
+            "text": "30 DNI NA ZWROT",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_NpkP9E"
+      ],
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -30,6 +55,7 @@
     }
   },
   "order": [
+    "announcement_bar_QLJ433",
     "header"
   ]
 }
