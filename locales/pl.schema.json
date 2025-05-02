@@ -1000,10 +1000,10 @@
       "name": "Baner z obrazem",
       "settings": {
         "image": {
-          "label": "Obraz 1"
+          "label": "Obraz Desktop"
         },
         "image_2": {
-          "label": "Obraz 2"
+          "label": "Obraz Mobile"
         },
         "stack_images_on_mobile": {
           "label": "Układaj obrazy w stosy"
