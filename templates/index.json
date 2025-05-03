@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner": {
@@ -45,6 +36,46 @@
         "mobile_content_alignment": "left",
         "show_text_below": false
       }
+    },
+    "info_moving_bar": {
+      "type": "info-moving-bar",
+      "blocks": {
+        "entry": {
+          "type": "entry",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sparkles.svg",
+            "text": "Minimalistyczna estetyka"
+          }
+        },
+        "entry_QBcgwG": {
+          "type": "entry",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/cog.svg",
+            "text": "Odpowiedzialna produkcja"
+          }
+        },
+        "entry_xnxCGA": {
+          "type": "entry",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/gem.svg",
+            "text": "Jakościowe wykończenie"
+          }
+        },
+        "entry_XbA3B3": {
+          "type": "entry",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/washing-machine.svg",
+            "text": "Możliwość prania w pralce"
+          }
+        }
+      },
+      "block_order": [
+        "entry",
+        "entry_QBcgwG",
+        "entry_xnxCGA",
+        "entry_XbA3B3"
+      ],
+      "settings": {}
     },
     "rich_text": {
       "type": "rich-text",
@@ -213,6 +244,7 @@
   },
   "order": [
     "image_banner",
+    "info_moving_bar",
     "rich_text",
     "featured_collection",
     "collage",

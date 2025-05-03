@@ -1,0 +1,35 @@
+.info-moving-bar {
+    padding: 2rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.info-moving-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.info-moving-bar__items {
+    display: flex;
+    gap: 5rem;
+    animation: scroll 60s linear infinite;
+    will-change: transform;
+    position: relative;
+}
