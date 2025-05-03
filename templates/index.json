@@ -77,36 +77,6 @@
       ],
       "settings": {}
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -240,15 +210,77 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_73Lc8m": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_8rTdYb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Czy mata jest wodoodporna?",
+            "icon": "none",
+            "row_content": "<p>Tak, mata jest wykonana z grubego wodoszczelnego materiału Oxford 600D zapewniającego 100% ochronę w razie mokrego czy błotnistego spaceru.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QxEDyV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Jak czyścić matę?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_w9LxgP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Czy psa można przypiąć podczas transportu?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_YAFgfX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Czy usztywnienie jest wyjmowane?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_8rTdYb",
+        "collapsible_row_QxEDyV",
+        "collapsible_row_w9LxgP",
+        "collapsible_row_YAFgfX"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Najczęściej zadawane pytania",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "info_moving_bar",
-    "rich_text",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "collapsible_content_73Lc8m"
   ]
 }

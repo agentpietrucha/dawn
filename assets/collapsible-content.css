@@ -49,6 +49,9 @@
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   max-width: 73.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .collapsible-content__header {
@@ -64,6 +67,10 @@
   .collapsible-content__heading {
     margin-bottom: 3rem;
   }
+}
+
+.accordion.content-container {
+  background-color: hsl(from var(--color-primary) h s l / 20%);
 }
 
 .collapsible-none-layout .accordion + .accordion {
@@ -102,11 +109,6 @@
 
 .collapsible-content summary:hover {
   background: rgba(var(--color-foreground), 0.04);
-}
-
-.collapsible-content summary:hover .accordion__title {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
 }
 
 /* check for flexbox gap in older Safari versions */
