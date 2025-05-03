@@ -18,8 +18,17 @@
 .list-social__link {
   align-items: center;
   display: flex;
-  padding: 1.1rem;
-  color: rgb(var(--color-foreground));
+}
+
+.list-social__link .svg-wrapper {
+  color: var(--color-accent-1);
+  height: 32px;
+  width: 32px;
+}
+
+.list-social__item .icon {
+  height: 32px;
+  width: 32px;
 }
 
 .utility-bar .list-social__link {
@@ -29,4 +38,8 @@
 
 .list-social__link:hover .icon {
   transform: scale(1.07);
+}
+
+.social-icons .list-unstyled {
+  margin-left: 1.3rem;
 }
