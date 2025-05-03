@@ -306,6 +306,11 @@
   .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
     text-align: right;
   }
+
+  .footer__content-bottom {
+    margin-bottom: 0;
+  }
+
   .footer__blocks-wrapper {
     flex-direction: row;
   }
