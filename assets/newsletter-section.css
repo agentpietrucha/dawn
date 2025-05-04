@@ -22,15 +22,6 @@
   margin-left: 0;
 }
 
-@media screen and (min-width: 750px) {
-  .newsletter__wrapper {
-    padding-right: 9rem;
-    padding-left: 9rem;
-    flex-direction: row;
-    gap: 32px;
-  }
-}
-
 .newsletter__wrapper > * {
   margin-top: 0;
   margin-bottom: 0;
@@ -57,9 +48,16 @@
   width: fit-content;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 1024px) {
   .newsletter__button {
     flex-shrink: 0;
     margin: 0 0 0 1rem;
+  }
+
+  .newsletter__wrapper {
+    padding-right: 9rem;
+    padding-left: 9rem;
+    flex-direction: row;
+    gap: 32px;
   }
 }

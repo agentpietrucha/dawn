@@ -84,7 +84,7 @@
   font-size: 12px;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 1024px) {
   .newsletter-form__message {
     justify-content: flex-start;
   }
