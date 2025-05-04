@@ -60,8 +60,8 @@
   },
   "newsletter": {
     "label": "E-mail",
-    "success": "Dziękujemy za subskrypcję",
-    "button_label": "Subskrybuj"
+    "success": "Dziękujemy za zapisanie się",
+    "button_label": "Zapisz się"
   },
   "accessibility": {
     "skip_to_text": "Przejdź do treści",

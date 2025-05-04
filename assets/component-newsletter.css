@@ -7,16 +7,13 @@
   position: relative;
 }
 
-@media screen and (min-width: 750px) {
-  .newsletter-form {
-    align-items: flex-start;
-    margin: 0 auto;
-    max-width: 36rem;
-  }
-}
-
 .newsletter-form__field-wrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: unset;
+  gap: 32px;
 }
 
 .newsletter-form__field-wrapper .field__input {
@@ -36,36 +33,72 @@
   margin-top: 2rem;
 }
 
-@media screen and (min-width: 750px) {
-  .newsletter-form__message {
-    justify-content: flex-start;
-  }
-}
-
 .newsletter-form__button {
-  width: 4.4rem;
-  margin: 0;
-  right: var(--inputs-border-width);
-  top: 0;
   height: 100%;
-  z-index: 2;
+  padding: 1.3rem 2.6rem;
+  width: fit-content;
+  border-radius: 12px;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  width: 100%;
 }
 
 .newsletter-form__button:focus-visible {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.4rem rgba(var(--color-foreground));
-  background-color: rgb(var(--color-background));
 }
 
 .newsletter-form__button:focus {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.4rem rgba(var(--color-foreground));
-  background-color: rgb(var(--color-background));
 }
 
-.newsletter-form__button:not(:focus-visible):not(.focused) {
-  box-shadow: inherit;
-  background-color: inherit;
+.newsletter-form__field-wrapper--input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
 }
 
-.newsletter-form__button .icon {
-  width: 1.5rem;
+.newsletter-form__input {
+  padding: 1.3rem 2.6rem;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.newsletter-form__agreement {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.newsletter-form__agreement input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-accent-1);
+}
+
+.newsletter-form__agreement label {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter-form__message {
+    justify-content: flex-start;
+  }
+
+  .newsletter-form__field-wrapper {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .newsletter-form__button {
+    width: fit-content;
+  }
+
+  .newsletter-form__field-wrapper--input {
+    gap: 16px
+  }
 }
