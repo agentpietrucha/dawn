@@ -40,13 +40,6 @@
     "info_moving_bar": {
       "type": "info-moving-bar",
       "blocks": {
-        "entry": {
-          "type": "entry",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/sparkles.svg",
-            "text": "Minimalistyczna estetyka"
-          }
-        },
         "entry_QBcgwG": {
           "type": "entry",
           "settings": {
@@ -67,13 +60,20 @@
             "icon": "shopify:\/\/shop_images\/washing-machine.svg",
             "text": "Możliwość prania w pralce"
           }
+        },
+        "entry": {
+          "type": "entry",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sparkles.svg",
+            "text": "Minimalistyczna estetyka"
+          }
         }
       },
       "block_order": [
-        "entry",
         "entry_QBcgwG",
         "entry_xnxCGA",
-        "entry_XbA3B3"
+        "entry_XbA3B3",
+        "entry"
       ],
       "settings": {}
     },
@@ -226,7 +226,9 @@
       "settings": {
         "heading": "<strong>Zapisz sie do naszego Newslettera<\/strong>",
         "subheading": "Lorem ipsum dolor sit amet consectetur. Sapien arcu sed ut amet a. Sed felis in gravida id et eu bibendum molestie ultricies.",
+        "agreement": "I agree to the <a href=\"<shopify-token value=\">\" target=\"_blank\" rel=\"noopener\">terms and conditions<\/a>.",
         "color_scheme": "",
+        "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -292,6 +294,74 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_fEVzzk": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_B8yRj9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/barkmate_ses2025-2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AgGrQj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/barkmate_ses2025-50.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pyyJ7U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/barkmate_ses2025-82.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CLYDLe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/barkmate_ses2025-84.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_B8yRj9",
+        "column_AgGrQj",
+        "column_pyyJ7U",
+        "column_CLYDLe"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Barkmate w trasie",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -302,6 +372,7 @@
     "video",
     "multicolumn",
     "newsletter_ML6gAT",
-    "collapsible_content_73Lc8m"
+    "collapsible_content_73Lc8m",
+    "multicolumn_fEVzzk"
   ]
 }
