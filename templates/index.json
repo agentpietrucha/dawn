@@ -37,6 +37,89 @@
         "show_text_below": false
       }
     },
+    "comparison_7JHYMd": {
+      "type": "comparison",
+      "blocks": {
+        "comparison_LKFXFY": {
+          "type": "comparison",
+          "settings": {
+            "title": "Komfort przede wszystkim",
+            "description": "<p>Nasza mata daje psu poczucie bezpieczeństwa, a Tobie spokój w trasie. Sztywna konstrukcja sięga aż pod przednie fotele, tworząc stabilną, wygodną przestrzeń na tylnej kanapie.<\/p>"
+          }
+        },
+        "comparison_GJ9YEr": {
+          "type": "comparison",
+          "settings": {
+            "title": "Styl, który robi różnicę",
+            "description": "<p>Cenisz estetykę? My też. Dlatego łączymy funkcjonalność z designem – z precyzją wykończenia i dbałością o detale. Nasza mata nie tylko świetnie wygląda ale też sprawdza się w każdych warunkach.<\/p>"
+          }
+        },
+        "comparison_HQxRYz": {
+          "type": "comparison",
+          "settings": {
+            "title": "Lokalna jakość, światowy standard",
+            "description": "<p>Nasze maty szyjemy w Polsce z europejskich materiałów klasy premium – takich, jakich używa się w profesjonalnym sprzęcie outdoorowym. Dzięki temu są trwałe, niezawodne i gotowe na lata wspólnych podróży.<\/p>"
+          }
+        },
+        "comparison_item_LpeL6n": {
+          "type": "comparison_item",
+          "settings": {
+            "title": "Podłoże",
+            "value1": "stabilne",
+            "value2": "bez podparcia"
+          }
+        },
+        "comparison_item_kRaxax": {
+          "type": "comparison_item",
+          "settings": {
+            "title": "Materiał",
+            "value1": "wodoodporny Oxford 600D",
+            "value2": "najczęściej przemakający"
+          }
+        },
+        "comparison_item_cgctDH": {
+          "type": "comparison_item",
+          "settings": {
+            "title": "Wykończenie",
+            "value1": "niezawodne metalowe dodatki",
+            "value2": "łamliwy plastik"
+          }
+        },
+        "comparison_item_jjzdtB": {
+          "type": "comparison_item",
+          "settings": {
+            "title": "Pokrowiec",
+            "value1": "w zestawie",
+            "value2": "brak"
+          }
+        },
+        "comparison_item_bYC8cE": {
+          "type": "comparison_item",
+          "settings": {
+            "title": "Produkcja",
+            "value1": "szyte lokalnie",
+            "value2": "nieetyczny łańcuch dostaw"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_LKFXFY",
+        "comparison_GJ9YEr",
+        "comparison_HQxRYz",
+        "comparison_item_LpeL6n",
+        "comparison_item_kRaxax",
+        "comparison_item_cgctDH",
+        "comparison_item_jjzdtB",
+        "comparison_item_bYC8cE"
+      ],
+      "name": "Comparison",
+      "settings": {
+        "color_scheme": "background-1",
+        "heading_size": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "info_moving_bar": {
       "type": "info-moving-bar",
       "blocks": {
@@ -426,6 +509,7 @@
   },
   "order": [
     "image_banner",
+    "comparison_7JHYMd",
     "info_moving_bar",
     "featured_collection",
     "collage",
