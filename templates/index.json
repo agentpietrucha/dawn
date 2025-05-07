@@ -195,6 +195,7 @@
         "column3"
       ],
       "settings": {
+        "framed": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "third",
@@ -347,6 +348,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
+        "framed": true,
         "title": "Barkmate w trasie",
         "heading_size": "h0",
         "image_width": "full",
@@ -404,6 +406,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
+        "framed": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
