@@ -2469,6 +2469,9 @@
     "multicolumn": {
       "name": "Multicolumn",
       "settings": {
+        "framed": {
+          "label": "Framed"
+        },
         "title": {
           "label": "Heading",
           "default": "Multicolumn"

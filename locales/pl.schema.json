@@ -2141,6 +2141,9 @@
     "multicolumn": {
       "name": "Wielokolumnowy",
       "settings": {
+        "framed": {
+          "label": "Ramka"
+        },
         "title": {
           "label": "Nagłówek",
           "default": "Wielokolumnowy"

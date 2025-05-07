@@ -75,17 +75,20 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+            <div class="multicolumn-card content-container {% if section.settings.framed %}framed{% endif %}">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div class="multicolumn-card__header">
-                  <span class="svg-wrapper">
-                    {{ 'logo-short-black.svg' | inline_asset_content }}
-                  </span>
-                  <h4 class="multicolumn-card__title">Barkmate</h4>
-                </div>
+
+                {% if section.settings.framed %}
+                  <div class="multicolumn-card__header">
+                    <span class="svg-wrapper">
+                      {{ 'logo-short-black.svg' | inline_asset_content }}
+                    </span>
+                    <h4 class="multicolumn-card__title">Barkmate</h4>
+                  </div>
+                {% endif %}
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
@@ -207,6 +210,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "framed",
+      "default": false,
+      "label": "t:sections.multicolumn.settings.framed.label"
+    },
     {
       "type": "inline_richtext",
       "id": "title",
