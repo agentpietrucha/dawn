@@ -364,6 +364,78 @@
     }
   },
   "sections": {
+    "comparison": {
+      "name": "Porównanie",
+      "table_label": "Tabela porównawcza produktów",
+      "feature_column": "Cecha",
+      "barkmate_column": "Barkmate",
+      "other_column": "Inne maty",
+      "barkmate_logo_alt": "Logo Barkmate",
+      "other_mats": "Inne maty",
+      "settings": {
+        "color_scheme": {
+          "label": "Schemat kolorów",
+          "options": {
+            "accent_1": "Akcent 1",
+            "accent_2": "Akcent 2",
+            "background_1": "Tło 1",
+            "background_2": "Tło 2",
+            "inverse": "Odwrócony"
+          }
+        },
+        "padding_top": {
+          "label": "Górny odstęp"
+        },
+        "padding_bottom": {
+          "label": "Dolny odstęp"
+        }
+      },
+      "blocks": {
+        "comparison": {
+          "name": "Porównanie",
+          "settings": {
+            "title": {
+              "label": "Tytuł"
+            },
+            "description": {
+              "label": "Opis"
+            }
+          }
+        },
+        "comparison_item": {
+          "name": "Element porównania",
+          "settings": {
+            "title": {
+              "label": "Tytuł"
+            },
+            "value1": {
+              "label": "Wartość 1"
+            },
+            "value2": {
+              "label": "Wartość 2"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Porównanie",
+        "blocks": {
+          "comparison": {
+            "settings": {
+              "title": "Porównanie produktów",
+              "description": "Porównaj cechy różnych produktów lub usług, aby pomóc klientom w podjęciu świadomej decyzji."
+            }
+          },
+          "comparison_item": {
+            "settings": {
+              "title": "Cena",
+              "value1": "99 zł",
+              "value2": "149 zł"
+            }
+          }
+        }
+      }
+    },
     "all": {
       "padding": {
         "section_padding_heading": "Wypełnienie",

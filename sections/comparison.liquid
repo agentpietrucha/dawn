@@ -54,17 +54,31 @@
           style="--animation-order: 1;"
         {% endif %}
         role="table"
-        aria-label="Product comparison table"
+        aria-label="{{ 'sections.comparison.table_label' | t }}"
       >
         <div class="comparison-brands-header" role="row">
-          <div class="brand-column feature-column" role="columnheader" aria-label="Feature">&nbsp;</div>
-          <div class="brand-column barkmate-column" role="columnheader" aria-label="Barkmate">
+          <div
+            class="brand-column feature-column"
+            role="columnheader"
+            aria-label="{{ 'sections.comparison.feature_column' | t }}"
+          >
+            &nbsp;
+          </div>
+          <div
+            class="brand-column barkmate-column"
+            role="columnheader"
+            aria-label="{{ 'sections.comparison.barkmate_column' | t }}"
+          >
             <h3 class="brand-title brand-logo">
               {{- 'logo-long-black.svg' | inline_asset_content -}}
             </h3>
           </div>
-          <div class="brand-column other-column" role="columnheader" aria-label="Other mats">
-            <h3 class="brand-title">Inne maty</h3>
+          <div
+            class="brand-column other-column"
+            role="columnheader"
+            aria-label="{{ 'sections.comparison.other_column' | t }}"
+          >
+            <h3 class="brand-title">{{ 'sections.comparison.other_mats' | t }}</h3>
           </div>
         </div>
 
@@ -75,10 +89,14 @@
                 {{ block.settings.title }}
               </div>
               <div class="brand-column barkmate-column" role="cell">
-                <div class="brand-value">{{ block.settings.value1 }}</div>
+                <div class="brand-value" aria-label="{{ block.settings.title }}: {{ block.settings.value1 }}">
+                  {{ block.settings.value1 }}
+                </div>
               </div>
               <div class="brand-column other-column" role="cell">
-                <div class="brand-value">{{ block.settings.value2 }}</div>
+                <div class="brand-value" aria-label="{{ block.settings.title }}: {{ block.settings.value2 }}">
+                  {{ block.settings.value2 }}
+                </div>
               </div>
             </div>
           {% endif %}
@@ -90,7 +108,7 @@
 
 {% schema %}
 {
-  "name": "Comparison",
+  "name": "t:sections.comparison.name",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -100,27 +118,27 @@
       "options": [
         {
           "value": "accent-1",
-          "label": "Accent 1"
+          "label": "t:sections.comparison.settings.color_scheme.options.accent_1"
         },
         {
           "value": "accent-2",
-          "label": "Accent 2"
+          "label": "t:sections.comparison.settings.color_scheme.options.accent_2"
         },
         {
           "value": "background-1",
-          "label": "Background 1"
+          "label": "t:sections.comparison.settings.color_scheme.options.background_1"
         },
         {
           "value": "background-2",
-          "label": "Background 2"
+          "label": "t:sections.comparison.settings.color_scheme.options.background_2"
         },
         {
           "value": "inverse",
-          "label": "Inverse"
+          "label": "t:sections.comparison.settings.color_scheme.options.inverse"
         }
       ],
       "default": "background-1",
-      "label": "Color scheme"
+      "label": "t:sections.comparison.settings.color_scheme.label"
     },
     {
       "type": "range",
@@ -129,7 +147,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Top padding",
+      "label": "t:sections.comparison.settings.padding_top.label",
       "default": 36
     },
     {
@@ -139,83 +157,45 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Bottom padding",
+      "label": "t:sections.comparison.settings.padding_bottom.label",
       "default": 36
     }
   ],
   "blocks": [
     {
       "type": "comparison",
-      "name": "Comparison",
+      "name": "t:sections.comparison.blocks.comparison.name",
       "settings": [
         {
           "type": "inline_richtext",
           "id": "title",
-          "label": "Title"
+          "label": "t:sections.comparison.blocks.comparison.settings.title.label"
         },
         {
           "type": "richtext",
           "id": "description",
-          "label": "Description"
+          "label": "t:sections.comparison.blocks.comparison.settings.description.label"
         }
       ]
     },
     {
       "type": "comparison_item",
-      "name": "Comparison Item",
+      "name": "t:sections.comparison.blocks.comparison_item.name",
       "settings": [
         {
           "type": "text",
           "id": "title",
-          "label": "Title"
+          "label": "t:sections.comparison.blocks.comparison_item.settings.title.label"
         },
         {
           "type": "text",
           "id": "value1",
-          "label": "Value 1"
+          "label": "t:sections.comparison.blocks.comparison_item.settings.value1.label"
         },
         {
           "type": "text",
           "id": "value2",
-          "label": "Value 2"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Comparison",
-      "blocks": [
-        {
-          "type": "comparison",
-          "settings": {
-            "title": "Product Comparison",
-            "description": "<p>Compare features of different products or services to help customers make informed decisions.</p>"
-          }
-        },
-        {
-          "type": "comparison_item",
-          "settings": {
-            "title": "Price",
-            "value1": "$99",
-            "value2": "$149"
-          }
-        },
-        {
-          "type": "comparison_item",
-          "settings": {
-            "title": "Features",
-            "value1": "Basic features",
-            "value2": "Advanced features"
-          }
-        },
-        {
-          "type": "comparison_item",
-          "settings": {
-            "title": "Warranty",
-            "value1": "1 year",
-            "value2": "2 years"
-          }
+          "label": "t:sections.comparison.blocks.comparison_item.settings.value2.label"
         }
       ]
     }

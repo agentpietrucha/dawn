@@ -364,6 +364,78 @@
     }
   },
   "sections": {
+    "comparison": {
+      "name": "Comparison",
+      "table_label": "Product comparison table",
+      "feature_column": "Feature",
+      "barkmate_column": "Barkmate", 
+      "other_column": "Other mats",
+      "barkmate_logo_alt": "Barkmate logo",
+      "other_mats": "Other mats",
+      "settings": {
+        "color_scheme": {
+          "label": "Color scheme",
+          "options": {
+            "accent_1": "Accent 1",
+            "accent_2": "Accent 2",
+            "background_1": "Background 1",
+            "background_2": "Background 2",
+            "inverse": "Inverse"
+          }
+        },
+        "padding_top": {
+          "label": "Top padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom padding"
+        }
+      },
+      "blocks": {
+        "comparison": {
+          "name": "Comparison",
+          "settings": {
+            "title": {
+              "label": "Title"
+            },
+            "description": {
+              "label": "Description"
+            }
+          }
+        },
+        "comparison_item": {
+          "name": "Comparison Item",
+          "settings": {
+            "title": {
+              "label": "Title"
+            },
+            "value1": {
+              "label": "Value 1"
+            },
+            "value2": {
+              "label": "Value 2"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Comparison",
+        "blocks": {
+          "comparison": {
+            "settings": {
+              "title": "Product Comparison",
+              "description": "Compare features of different products or services to help customers make informed decisions."
+            }
+          },
+          "comparison_item": {
+            "settings": {
+              "title": "Price",
+              "value1": "$99",
+              "value2": "$149"
+            }
+          }
+        }
+      }
+    },
     "all": {
       "animation": {
         "content": "Animations",
