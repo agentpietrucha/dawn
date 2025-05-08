@@ -368,7 +368,7 @@
       "name": "Comparison",
       "table_label": "Product comparison table",
       "feature_column": "Feature",
-      "barkmate_column": "Barkmate", 
+      "barkmate_column": "Barkmate",
       "other_column": "Other mats",
       "barkmate_logo_alt": "Barkmate logo",
       "other_mats": "Other mats",
