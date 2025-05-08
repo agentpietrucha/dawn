@@ -37,6 +37,38 @@
         "show_text_below": false
       }
     },
+    "product_showcase_pkdcc9": {
+      "type": "product-showcase",
+      "blocks": {
+        "entry_Bank4E": {
+          "type": "entry",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/barkmate_product_main.jpg"
+          }
+        },
+        "entry_d6q3pj": {
+          "type": "entry",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/barkmate_07.jpg"
+          }
+        },
+        "entry_8CzhXM": {
+          "type": "entry",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/barkmate_09.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "entry_Bank4E",
+        "entry_d6q3pj",
+        "entry_8CzhXM"
+      ],
+      "name": "Product Showcase",
+      "settings": {
+        "main_image": "shopify:\/\/shop_images\/barkmate_product_main_2b573ea2-5ed7-43e0-a1a9-31721c7e5ea0.jpg"
+      }
+    },
     "comparison_7JHYMd": {
       "type": "comparison",
       "blocks": {
@@ -382,12 +414,9 @@
   },
   "order": [
     "image_banner",
+    "product_showcase_pkdcc9",
     "comparison_7JHYMd",
     "info_moving_bar",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn",
     "newsletter_ML6gAT",
     "collapsible_content_73Lc8m",
     "multicolumn_fEVzzk",
