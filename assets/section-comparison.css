@@ -1,5 +1,20 @@
 .comparison {
-  background-color: var(--gradient-background);
+  padding: 60px 0;
+  background-color: #FAF9F7;
+}
+
+.comparison-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5.33rem;
+}
+
+.comparison-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5.33rem;
+  flex: 2;
 }
 
 .section-padding {
@@ -14,97 +29,202 @@
   }
 }
 
-.comparison-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.comparison-table-container {
+  max-width: 1000px;
+  flex: 5;
+  overflow: hidden;
 }
 
-.comparison-info {
+.comparison-brands, .comparison-brands-header {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  width: 100%;
 }
 
-/* .comparison-info {
-  margin-bottom: 2rem;
-} */
+.comparison-brands:last-child, .comparison-brands-header:last-child {
+  border-bottom: none;
+}
 
-/* .comparison-title {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+.brand-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 20px;
+  text-align: center;
+}
+.comparison-brands > .brand-column.feature-column {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.comparison-brands > .brand-column.other-column {
+  border-right: 1px solid black;
+  border-top: 1px solid black; 
+}
+
+.comparison-brands:last-child > .brand-column.feature-column {
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 10px;
+}
+
+.comparison-brands:last-child > .brand-column.other-column {
+  border-bottom: 1px solid black;
+  border-bottom-right-radius: 10px;
+}
+
+.feature-column {
+  width: 20%;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000;
+  text-align: right;
+}
+
+.barkmate-column {
+  width: 45%;
+  background-color: #F2F0ED;
+}
+
+.other-column {
+  width: 35%;
+}
+
+.comparison-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1.33333rem;
+  color: #000;
 }
 
 .comparison-description {
-  margin-bottom: 2rem;
-} */
-
-.comparison-item {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  font-size: 1.33333rem;
+  line-height: 1.4;
 }
 
-.comparison-item p, .comparison-item .h2 {
+.comparison-description p {
   margin: 0;
 }
 
-.comparison-table-container {
-  overflow-x: auto;
+.brand-value {
+  font-size: 1.5rem;
+  line-height: 1.4;
 }
 
-.comparison-table {
+.barkmate-column .brand-value {
+  font-weight: 600;
+  color: #000;
+}
+
+.other-column .brand-value {
+  color: #4E4E4E;
+  font-size: 1.333rem;
+  font-weight: 400;
+}
+
+.comparison-brands-header .other-column .brand-title {
+  font-size: 1.5rem;
+}
+
+.comparison-brands-header:first-child .barkmate-column {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid black;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.comparison-brands-header .barkmate-column.other-column {
+  border: none;
+}
+
+.brand-title.brand-logo {
+  max-width: 140px;
+  align-self: center;
   width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
+  margin: 0;
 }
 
-.comparison-table th,
-.comparison-table td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+.comparison-brands .brand-column.barkmate-column {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
-.comparison-table th {
-  font-weight: bold;
-  background-color: rgba(var(--color-foreground), 0.03);
+.comparison-brands:last-child .brand-column.barkmate-column {
+  border-bottom: 1px solid black;
 }
 
-.comparison-table tr:hover {
-  background-color: rgba(var(--color-foreground), 0.03);
+.comparison-table-container .comparison-brands:nth-child(2) .brand-column.feature-column {
+  border-top-left-radius: 10px;
 }
 
-.comparison-table td:first-child {
-  font-weight: 500;
+.comparison-table-container .comparison-brands:nth-child(2) .brand-column.other-column {
+  border-top-right-radius: 10px;
 }
 
-/* Media Queries */
-@media screen and (max-width: 749px) {
-  .comparison-table {
-    font-size: 0.9rem;
+/* Responsive Styling */
+@media screen and (max-width: 1024px) {
+  .comparison-container {
+    flex-direction: column;
   }
-  
-  .comparison-table th,
-  .comparison-table td {
-    padding: 0.8rem;
+
+  .comparison-info {
+    gap: 4rem;
+    flex: 1;
+  }
+
+  .comparison-table-container {
+    flex: 1;
+  }
+
+  .comparison-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-column,
+  .barkmate-column,
+  .other-column {
+    padding: 15px 10px;
+  }
+
+  .feature-column {
+    width: 30%;
+  }
+
+  .barkmate-column {
+    width: 40%;
+  }
+
+  .other-column {
+    width: 30%;
+  }
+
+  .barkmate-column .brand-value,
+  .comparison-brands-header .other-column .brand-title,
+  .comparison-description,
+  .feature-column {
+    font-size: 1.1666rem;
+  }
+
+  .other-column .brand-value {
+    font-size: 1rem;
+  }
+
+  .brand-title.brand-logo {
+    max-width: 90px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .brand-column {
+    padding: 18px 15px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .comparison-container {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
   .comparison-info {
     width: 40%;
     padding-right: 4rem;
     gap: 3rem;
-  }
-
-  .comparison-table-container {
-    width: 60%;
   }
 }
 

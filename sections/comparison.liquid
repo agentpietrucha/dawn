@@ -10,36 +10,45 @@
         {% for block in section.blocks %}
           {% if block.type == 'comparison' %}
             <div class="comparison-item">
-              <h2 class="inline-richtext comparison-title {{ section.settings.heading_size }}">
-                {{ block.settings.title }}
-              </h2>
-              <div class="comparison-description">{{ block.settings.description }}</div>
+              <h3 class="comparison-title">{{ block.settings.title }}</h3>
+              <div class="comparison-description">
+                {{ block.settings.description }}
+              </div>
             </div>
           {% endif %}
         {% endfor %}
       </div>
 
       <div class="comparison-table-container">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Option 1</th>
-              <th>Option 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for block in section.blocks %}
-              {% if block.type == 'comparison_item' %}
-                <tr>
-                  <td>{{ block.settings.title }}</td>
-                  <td>{{ block.settings.value1 }}</td>
-                  <td>{{ block.settings.value2 }}</td>
-                </tr>
-              {% endif %}
-            {% endfor %}
-          </tbody>
-        </table>
+        <div class="comparison-brands-header">
+          <div class="brand-column feature-column">&nbsp;</div>
+          <div class="brand-column barkmate-column">
+            <h3 class="brand-title brand-logo">
+              {{- 'logo-long-black.svg' | inline_asset_content -}}
+            </h3>
+            {% comment %} <div class="brand-value">stabilne</div> {% endcomment %}
+          </div>
+          <div class="brand-column other-column">
+            <h3 class="brand-title">Inne maty</h3>
+            {% comment %} <div class="brand-value">bez podparcia</div> {% endcomment %}
+          </div>
+        </div>
+
+        {% for block in section.blocks %}
+          {% if block.type == 'comparison_item' %}
+            <div class="comparison-brands">
+              <div class="brand-column feature-column">
+                {{ block.settings.title }}
+              </div>
+              <div class="brand-column barkmate-column">
+                <div class="brand-value">{{ block.settings.value1 }}</div>
+              </div>
+              <div class="brand-column other-column">
+                <div class="brand-value">{{ block.settings.value2 }}</div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>
