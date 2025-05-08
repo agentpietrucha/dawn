@@ -1,8 +1,3 @@
-.comparison {
-  padding: 60px 0;
-  background-color: #FAF9F7;
-}
-
 .comparison-container {
   display: flex;
   flex-direction: row;
@@ -81,7 +76,7 @@
 
 .barkmate-column {
   width: 45%;
-  background-color: #F2F0ED;
+  background-color: var(--color-primary);
 }
 
 .other-column {

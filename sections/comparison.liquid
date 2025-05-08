@@ -1,15 +1,41 @@
 {{ 'section-comparison.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    }
+  }
+{%- endstyle -%}
+
 <div
   class="comparison color-{{ section.settings.color_scheme }} gradient section-padding"
   style="--padding-top: {{ section.settings.padding_top }}; --padding-bottom: {{ section.settings.padding_bottom }};"
 >
-  <div class="page-width">
+  <div
+    class="page-width section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}"
+    {% if settings.animations_reveal_on_scroll %}
+      data-cascade
+    {% endif %}
+  >
     <div class="comparison-container">
       <div class="comparison-info">
         {% for block in section.blocks %}
           {% if block.type == 'comparison' %}
-            <div class="comparison-item">
+            <div
+              class="comparison-item {% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
               <h3 class="comparison-title">{{ block.settings.title }}</h3>
               <div class="comparison-description">
                 {{ block.settings.description }}
@@ -19,18 +45,22 @@
         {% endfor %}
       </div>
 
-      <div class="comparison-table-container">
+      <div
+        class="comparison-table-container {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+          style="--animation-order: 1;"
+        {% endif %}
+      >
         <div class="comparison-brands-header">
           <div class="brand-column feature-column">&nbsp;</div>
           <div class="brand-column barkmate-column">
             <h3 class="brand-title brand-logo">
               {{- 'logo-long-black.svg' | inline_asset_content -}}
             </h3>
-            {% comment %} <div class="brand-value">stabilne</div> {% endcomment %}
           </div>
           <div class="brand-column other-column">
             <h3 class="brand-title">Inne maty</h3>
-            {% comment %} <div class="brand-value">bez podparcia</div> {% endcomment %}
           </div>
         </div>
 
@@ -87,26 +117,6 @@
       ],
       "default": "background-1",
       "label": "Color scheme"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "Small"
-        },
-        {
-          "value": "h1",
-          "label": "Large"
-        },
-        {
-          "value": "h0",
-          "label": "Extra large"
-        }
-      ],
-      "default": "h1",
-      "label": "Heading size"
     },
     {
       "type": "range",
