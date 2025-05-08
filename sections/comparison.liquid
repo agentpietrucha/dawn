@@ -15,12 +15,11 @@
 {%- endstyle -%}
 
 <div
-  class="comparison color-{{ section.settings.color_scheme }} gradient section-padding"
-  style="--padding-top: {{ section.settings.padding_top }}; --padding-bottom: {{ section.settings.padding_bottom }};"
+  class="comparison color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
   aria-labelledby="comparison-heading"
 >
   <div
-    class="page-width section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}"
+    class="page-width {% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
