@@ -8,6 +8,17 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+#MainContent {
+  top: -78px;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  #MainContent {
+    top: 0;
+  }
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
