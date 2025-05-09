@@ -14,9 +14,6 @@
 .multicolumn .page-width:not(.framed) {
   padding: 0;
 }
-.multicolumn .page-width.framed {
-  padding: 0 3rem;
-}
 
 @media screen and (max-width: 749px) {
   .multicolumn .title-wrapper-with-link {
