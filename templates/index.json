@@ -424,7 +424,7 @@
       "settings": {
         "framed": true,
         "title": "Barkmate w trasie",
-        "heading_size": "h0",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
