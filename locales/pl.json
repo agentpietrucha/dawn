@@ -284,6 +284,15 @@
     }
   },
   "sections": {
+    "comparison": {
+      "name": "Porównanie",
+      "table_label": "Tabela porównawcza produktów",
+      "feature_column": "Cecha",
+      "barkmate_column": "Barkmate",
+      "other_column": "Inne maty",
+      "barkmate_logo_alt": "Logo Barkmate",
+      "other_mats": "Inne maty"
+    },
     "header": {
       "announcement": "Ogłoszenie",
       "menu": "Menu",
