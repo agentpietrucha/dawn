@@ -1,3 +1,7 @@
+.product-showcase {
+  position: relative;
+}
+
 .product-showcase .page-width {
   padding: 0;
 }
@@ -7,7 +11,6 @@
   flex-direction: row;
   max-height: 1500px;
   height: calc(100vh - 61px);
-  border: 1px solid red;
   /* gap: 2rem; */
 }
 
@@ -16,14 +19,20 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* max-height: 450px; */
   overflow-y: auto;
-  /* padding-right: 1rem; */
-  /* Custom scrollbar styling */
+  /* For better scrolling experience */
+  scroll-behavior: smooth;
+  /* For smoother scroll on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Force visibility of scrollbar */
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-  /* Fix for iOS scroll physics */
-  -webkit-overflow-scrolling: touch;
+  /* Prevent scroll bleeding to parent */
+  overscroll-behavior: contain;
+  /* Bottom padding for better spacing */
+  /* padding-bottom: 20px; */
+  /* Enable pointer events for wheel capturing */
+  pointer-events: auto;
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -40,12 +49,25 @@
   border-radius: 10px;
 }
 
+/* Visual state indicators for debugging */
+.product-showcase.is-in-viewport {
+  /* Optional: add visual indicator */
+  position: relative;
+}
+
+.product-showcase.mouse-over {
+  /* Optional: add visual indicator when mouse is over */
+}
+
 .product-showcase__image {
   width: 100%;
   flex-shrink: 0;
-  /* border-radius: 6px; */
   overflow: hidden;
   border-bottom: 1px solid black;
+  /* Improve rendering performance */
+  will-change: transform;
+  /* Add smooth transitions */
+  transition: transform 0.2s ease;
 }
 
 .product-showcase__image img {
@@ -67,11 +89,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* display: block; */
   /* border-radius: 6px; */
 }
 
-/* Add responsiveness */
+/* Responsive styling */
 @media screen and (max-width: 1024px) {
   .product-showcase__container {
     flex-direction: column;
@@ -81,30 +102,11 @@
 
   .product-showcase__images {
     display: none;
-    /* flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-right: 0;
-    padding-bottom: 1rem;
-    max-height: none;
-    gap: 0.75rem; */
-  }
-  
-  .product-showcase__image {
-    width: 120px;
-    height: 120px;
-    flex-shrink: 0;
-  }
-  
-  .product-showcase__image img {
-    height: 100%;
-    object-fit: cover;
   }
   
   .product-showcase__image-primary {
     margin-top: 1rem;
     position: relative;
-    /* height: auto; */
     max-height: calc(100vh - 61px);
     border: none
   }
@@ -112,12 +114,6 @@
   .product-showcase__image-primary img {
     object-fit: contain;
     height: auto;
-  }
-  
-  /* Adjust scrollbar for horizontal scroll */
-  .product-showcase__images::-webkit-scrollbar {
-    height: 5px;
-    width: auto;
   }
 }
 
