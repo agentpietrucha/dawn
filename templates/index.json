@@ -454,7 +454,7 @@
       "settings": {
         "heading": "<strong>Zapisz sie do naszego Newslettera<\/strong>",
         "subheading": "Lorem ipsum dolor sit amet consectetur. Sapien arcu sed ut amet a. Sed felis in gravida id et eu bibendum molestie ultricies.",
-        "agreement": "I agree to the <a href=\"<shopify-token value=\">\" target=\"_blank\" rel=\"noopener\">terms and conditions<\/a>.",
+        "agreement": "Zgadzam się na <a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">termsy<\/a>",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 64,
