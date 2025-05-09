@@ -1,27 +1,23 @@
 .multicolumn .title {
-  margin: 0;
+  font-weight: 600;
 }
 
 .multicolumn.no-heading .title {
   display: none;
 }
 
-.multicolumn .title-wrapper-with-link {
-  margin-top: 0;
-  justify-self: center;
-}
-
 .multicolumn .page-width:not(.framed) {
   padding: 0;
 }
 
-@media screen and (max-width: 749px) {
-  .multicolumn .title-wrapper-with-link {
-    margin-bottom: 3rem;
-  }
+.multicolumn__title {
+  text-align: center;
+}
 
+@media screen and (max-width: 749px) {
   .multicolumn .page-width.framed {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -241,7 +237,7 @@
   align-items: center;
   justify-content: start;
   gap: 12px;
-  padding: 16px;
+  padding: 16px 21px;
 }
 
 
@@ -261,7 +257,7 @@
 
 @media screen and (max-width: 750px) {
   .multicolumn-card__header {
-    padding: 12px;
+    padding: 14px 18px;
   }
 
   .multicolumn-card__header .svg-wrapper {
