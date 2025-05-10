@@ -511,7 +511,7 @@
       "settings": {
         "caption": "",
         "heading": "<strong>Najczęściej zadawane pytania<\/strong>",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "heading_alignment": "center",
         "layout": "row",
         "container_color_scheme": "",
