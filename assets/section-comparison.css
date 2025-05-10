@@ -117,6 +117,7 @@
 
 .comparison-brands-header .other-column .brand-title {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .comparison-brands-header:first-child .barkmate-column {
@@ -193,12 +194,14 @@
     width: 30%;
   }
 
-  .barkmate-column .brand-value,
   .comparison-brands-header .other-column .brand-title,
-  .comparison-description,
-  .feature-column {
+  .comparison-description {
     font-size: 1.1666rem;
   }
+
+.barkmate-column, .barkmate-column .brand-value, .feature-column {
+  font-size: 1rem;
+}
 
   .other-column .brand-value {
     font-size: 1rem;
