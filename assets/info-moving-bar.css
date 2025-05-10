@@ -33,3 +33,14 @@
     will-change: transform;
     position: relative;
 }
+
+.item_content {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+@media screen and (max-width: 750px) {
+    .item_content {
+        font-size: 1.333rem;
+    }
+}
